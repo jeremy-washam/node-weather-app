@@ -16,6 +16,9 @@ const print = console.log;
 // Set up app
 const app = express();
 
+// Set up port
+const port = process.env.PORT || 3000;
+
 // Set up handlebars views engine
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -97,6 +100,6 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  print(chalk.green('Server is up and running on port 3000.'));
+app.listen(port, () => {
+  print(chalk.green(`Server is up and running on ${port}.`));
 });
