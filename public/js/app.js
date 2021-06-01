@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (e) => {
       messageTwo.textContent = '';
     } else {
       messageOne.textContent = data.location;
-      messageTwo.textContent = `It is currently ${data.data.weather_descriptions[0]} with a temperature of ${data.data.temperature} degrees Fahrenheit.`;
+      messageTwo.textContent = `It is currently ${data.data.weather_descriptions[0]} with a temperature of ${data.data.temperature} degrees Fahrenheit. The humidity is ${data.data.humidity}% and there is a ${data.data.precipitation}% chance of precipitation.`;
       console.log(data.data);
     }
   });
